@@ -10,13 +10,9 @@ const register = (req, res, next) => {
             })
         }
         let user = new User({
-            firstName: req.body.firstName,
-            sureName: req.body.sureName,
-            gender: req.body.gender,
-            birthday: req.body.birthday,
-            password: hashedPass,
+            name: req.body.name,
             email: req.body.email,
-            phoneNumber: req.body.phoneNumber,
+            password: req.body.password,
         })
 
         user.save()

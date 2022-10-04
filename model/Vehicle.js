@@ -1,9 +1,17 @@
 const mongoose = require("mongoose");
 
-const Post = new mongoose.Schema({
-    userID: {
+const vehicle = new mongoose.Schema({
+    reg_No: {
         type:String,
         required:true,
+    },
+    type: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
     },
     date: {
         type:String,
@@ -13,14 +21,19 @@ const Post = new mongoose.Schema({
         type: String,
         required: true
     },
-    title: {
+    price: {
         type: String,
         required: true
     },
-    body: {
+    seller_nic: {
+        type: String,
+        required: true
+    },
+    seller_no: {
         type: String,
         required: true
     }
+
 }, {timestamps:true})
 
-module.exports = mongoose.model("post",Post);
+module.exports = mongoose.model("vehicle",vehicle);

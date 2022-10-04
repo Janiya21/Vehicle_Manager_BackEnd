@@ -1,22 +1,22 @@
 const express = require('express');
 const route =express.Router();
 const app = express();
-const Post = require("../model/Post");
+const Vehicle = require("../model/Vehicle");
 const dotenv = require('dotenv');
 
 dotenv.config({path:'config.env'});
 
 app.use(express.json());
 
-const getAllPosts = (req, res) => {
-    Post.find()
+const getAllVehicles = (req, res) => {
+    Vehicle.find()
         .then(data => res.json(data))
         .catch(error => res.json(error))
 }
 
-const createPost = async (req, res) => {
+const regVehicle = async (req, res) => {
     try {
-        const myUser = new Post(req.body);
+        const myUser = new Vehicle(req.body);
         await myUser.save();
         res.send(myUser);
     } catch (error) {
@@ -24,45 +24,45 @@ const createPost = async (req, res) => {
     }
 }
 
-const updatePost = async (req, res) => {
+const updateVehicle = async (req, res) => {
     try {
-        const myPost = new Post(req.body);
+        const myPost = new Vehicle(req.body);
         const id = req.body._id;
-        console.log(id,myPost.title,myPost.body)
-        const updateRow = {_id: id};
+        console.log(id,myPost.type,myPost.location);
+        /*const updateRow = {_id: id};
         let newValues = { $set: {title: myPost.title, body: myPost.body}}
         await myPost.updateOne(updateRow,newValues,function(err, res) {
             if (err) throw err;
             console.log("1 document updated");
         });
-        res.send(myPost);
+        res.send(myPost);*/
     } catch (error) {
         res.status(500).json(error);
     }
 }
 
-const getPostByID = (req, res) => {
+const getVehicleById = (req, res) => {
     const id = req.body._id;
 
-    Post.findOne({$or: [{_id: id}]})
+    Vehicle.findOne({$or: [{_id: id}]})
         .then(data => res.json(data))
         .catch(error => res.json(error))
 }
 
-const getRevPosts = (req, res) => {
+const getRevVehicle = (req, res) => {
     const id = req.body.userID;
 
-    Post.find({$or: [{userID: id}]})
+    Vehicle.find({$or: [{userID: id}]})
         .then(data => res.json(data))
         .catch(error => res.json(error))
 }
 
-const deletePost = (req, res) => {
+const deleteVehicle = (req, res) => {
     const id = req.body._id;
     const deleteRow = {$or: [{_id: id}]};
-    Post.deleteOne(deleteRow)
+    Vehicle.deleteOne(deleteRow)
         .then(data => res.json(data))
         .catch(error => res.json(error))
 }
 
-module.exports = {getAllPosts,createPost,deletePost,updatePost,getRevPosts,getPostByID};
+module.exports = {getAllVehicles,regVehicle,updateVehicle,getVehicleById,getRevVehicle,deleteVehicle};

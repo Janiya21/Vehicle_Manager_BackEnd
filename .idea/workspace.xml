@@ -5,6 +5,15 @@
       <change beforePath="$PROJECT_DIR$/../.expo/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.expo/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/PostController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/VehicleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/UserController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Vehicle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/PostRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/VehicleRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/UserRouter.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vehicle_manager" beforeDir="false" afterPath="$PROJECT_DIR$/../vehicle_manager" afterDir="false" />
     </list>
@@ -34,8 +43,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Web All/Fb Clone/Back-End" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controller" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JANITH\Desktop\Desktop All Here\Mobile\React-Native\Vehicle_manager_backEnd\controller" />
+      <recent name="C:\Users\JANITH\Desktop\Desktop All Here\Mobile\React-Native\Vehicle_manager_backEnd\routes" />
+      <recent name="C:\Users\JANITH\Desktop\Desktop All Here\Mobile\React-Native\Vehicle_manager_backEnd\model" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -58,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664878322432</updated>
-      <workItem from="1664878323982" duration="2799000" />
+      <workItem from="1664878323982" duration="8241000" />
     </task>
     <servers />
   </component>
