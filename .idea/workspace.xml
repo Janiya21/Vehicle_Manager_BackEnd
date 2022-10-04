@@ -5,7 +5,8 @@
       <change beforePath="$PROJECT_DIR$/../.expo/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.expo/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/VehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/VehicleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vehicle_manager" beforeDir="false" afterPath="$PROJECT_DIR$/../vehicle_manager" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664878322432</updated>
-      <workItem from="1664878323982" duration="9912000" />
+      <workItem from="1664878323982" duration="11637000" />
     </task>
     <servers />
   </component>

@@ -54,17 +54,18 @@ const getUserByID = (req, res) => {
 const login = (req,res,next) => {
     const email = req.body.email;
     const password = req.body.password;
+    const name = req.body.name;
 
-    User.findOne({$or: [{email:email}, {firstName:email}]})
+    User.findOne({$or: [{email:email}, {name:name}]})
         .then(user => {
             if(user){
                 bcrypt.compare(password, user.password, function(err,result){
-                    if(err){
+                    /*if(err){
                         res.json({
                             error:err
                         })
-                    }
-                    if(result){
+                    }*/
+                    if(password===user.password){
                         let token = jwt.sign({name : user.email}, 'verySecretValue', {expiresIn: '1h'})
                         res.json({
                             message: 'Login Successful',
@@ -72,7 +73,7 @@ const login = (req,res,next) => {
                         })
                     }else{
                         res.json({
-                            message: 'Password does not match'
+                            message: 'Password does not match '
                         })
                     }
                 })
