@@ -29,28 +29,28 @@ const updateVehicle = async (req, res) => {
         const myPost = new Vehicle(req.body);
         const id = req.body._id;
         console.log(id,myPost.type,myPost.location);
-        /*const updateRow = {_id: id};
-        let newValues = { $set: {title: myPost.title, body: myPost.body}}
+        const updateRow = {_id: id};
+        let newValues = { $set: {reg_No: myPost.reg_No, seller_nic: myPost.seller_nic}}
         await myPost.updateOne(updateRow,newValues,function(err, res) {
             if (err) throw err;
             console.log("1 document updated");
         });
-        res.send(myPost);*/
+        res.send(myPost);
     } catch (error) {
         res.status(500).json(error);
     }
 }
 
 const getVehicleById = (req, res) => {
-    const id = req.body._id;
+    const id = req.body.reg_No;
 
-    Vehicle.findOne({$or: [{_id: id}]})
+    Vehicle.findOne({$or: [{reg_No: id}]})
         .then(data => res.json(data))
         .catch(error => res.json(error))
 }
 
 const getRevVehicle = (req, res) => {
-    const id = req.body.userID;
+    const id = req.body.date;
 
     Vehicle.find({$or: [{userID: id}]})
         .then(data => res.json(data))
