@@ -60,25 +60,23 @@ const login = (req,res,next) => {
         .then(user => {
             if(user){
                 bcrypt.compare(password, user.password, function(err,result){
-                    /*if(err){
-                        res.json({
-                            error:err
-                        })
-                    }*/
                     if(password===user.password){
                         let token = jwt.sign({name : user.email}, 'verySecretValue', {expiresIn: '1h'})
                         res.json({
+                            valid:'OK',
                             message: 'Login Successful',
                             token
                         })
                     }else{
                         res.json({
+                            valid:'NO',
                             message: 'Password does not match '
                         })
                     }
                 })
             }else{
                 res.json({
+                    valid:'NO',
                     message:'No user Found'
                 })
             }
